@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>User Information</h2>
+    <button onclick="getUserInfo()">Enter Information</button>
+    <h3>Enter Details are :</h3>
+    <p id="output"></p>
+
+    <script>
+        function getUserInfo()
+        {
+            const name = prompt("Enter your name");
+            const age = prompt("Enter your age");
+            const phone = prompt("Enter your phone number");
+
+            const output =` 
+            Name : ${name} <br>
+            Age : ${age} <br>
+            PhoneNumber : ${phone} `
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+</html>
