@@ -30,6 +30,8 @@
             let result;
             
 
+            if(typeof num1 ==='number' && typeof num2==='number')
+        {
             switch(operation)
             {
                 case 'add':
@@ -55,7 +57,9 @@
         break;
         default:
             result = "Invalid OPeration";
-            }
+            }}
+            else
+            result="Error : The data entered must be numbers ";
             document.getElementById('result').textContent="Result : "+result;
         }
     </script>
