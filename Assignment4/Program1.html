@@ -1,0 +1,36 @@
+
+<!-- 1. Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw") -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate characters</title>
+</head>
+<body>
+    <script>
+        function removeDuplicateCharacters(str)
+        {
+            let result = '';
+            let seen = new Set();
+            for(let char of str)
+        {
+            if(!seen.has(char))
+        {
+            seen.add(char);
+            result+=char;
+        }
+        }
+        return result;
+        }
+        let input = prompt("Enter a String :");
+        let output = removeDuplicateCharacters(input);
+
+        alert("Output without duplicates : "+output);
+        console.log("Output without duplicates :",output);
+    </script>
+</body>
+</html>
