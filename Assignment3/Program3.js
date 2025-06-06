@@ -7,10 +7,10 @@ function pattern ()
         
         for(let j=1;j<=i;j++)
         {
-            str+=i;
+            str+=i+" ";
      
         }
-        console.log(str+" ");
+        console.log(str);
 
     }
 }

@@ -2,17 +2,17 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Simple Calculator</h2>
 
-    <input type="number" id="num1" placeholder="Enter the first number ">
-    <input type="number" id="num2" placeholder="Enter the Second Number">
-    <br><br>
+    <input type="number" id="num1" placeholder="Enter the first number " />
+    <input type="number" id="num2" placeholder="Enter the Second Number" />
+    <br /><br />
 
     <button onclick="calculate('add')">Add</button>
     <button onclick="calculate('sub')">Sub</button>
@@ -22,46 +22,35 @@
     <p id="result"></p>
 
     <script>
-        function calculate(operation)
-        {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
+      function calculate(operation) {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
 
-            let result;
-            
+        let result;
 
-            if(typeof num1 ==='number' && typeof num2==='number')
-        {
-            switch(operation)
-            {
-                case 'add':
-                    result=num1+num2;
-                    break;
-                    case 'sub':
-                    if(num1>num2)
-                    result=num1-num2;
-                else
-                result=num2-num1;
-            break;
-            case'mul':
-            result=num1*num2;
-            break;
-            case 'div':
-            if(num2===0)
-            {
-                result="Cannot be divided by Zero";
-
-            }
-            else 
-            result = num1/num2;
-        break;
-        default:
-            result = "Invalid OPeration";
-            }}
-            else
-            result="Error : The data entered must be numbers ";
-            document.getElementById('result').textContent="Result : "+result;
-        }
+        if (typeof num1 === "number" && typeof num2 === "number") {
+          switch (operation) {
+            case "add":
+              result = num1 + num2;
+              break;
+            case "sub":
+              if (num1 > num2) result = num1 - num2;
+              else result = num2 - num1;
+              break;
+            case "mul":
+              result = num1 * num2;
+              break;
+            case "div":
+              if (num2 === 0) {
+                result = "Cannot be divided by Zero";
+              } else result = num1 / num2;
+              break;
+            default:
+              result = "Invalid OPeration";
+          }
+        } else result = "Error : The data entered must be numbers ";
+        document.getElementById("result").textContent = "Result : " + result;
+      }
     </script>
-</body>
+  </body>
 </html>
